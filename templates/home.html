@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}Home{% endblock title %}
+{% block content %}
+
+    <div class="jumbotron">
+        <h1 class="display-4">Newspaper app</h1>
+        <p class="lead">A Newspaper website built with Django.</p>
+        <p class="lead">
+        <a class="btn btn-primary btn-lg" href="{% url 'article_list' %}" role="button">View All Articles</a>
+        </p>
+
+    {% comment %} {% if user.is_authenticated %}
+        Hi {{ user.username }}!
+        <p><a href="{% url 'logout' %}">Log Out</a></p>
+    {% else %}
+        <p>You are not logged in</p>
+        <a class='btn btn-info' href="{% url 'login' %}">Log In</a>
+        <a class='btn btn-success' href="{% url 'signup' %}">Sign Up</a>
+    </div>
+{% endif %} {% endcomment %}
+{% endblock content %}
