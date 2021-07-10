@@ -4,7 +4,7 @@
 {% block content %}
  
     <h1>Create Articles</h1>
-    <form action="{% url 'article_edit' article.pk %}" method="post">{% csrf_token %}
+    <form action="{% url 'article_create' %}" method="post">{% csrf_token %}
         {{ form|crispy }}
     <button class="btn btn-info ml-2" type="submit">Create</button>
     </form>
