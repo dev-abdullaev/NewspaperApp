@@ -20,6 +20,7 @@ class ArticleListView(ListView):
 class ArticleDetailView(LoginRequiredMixin, DetailView):
     model = Articles
     template_name = "article_detail.html"
+    context_object_name = "article"
     login_url = "login"
 
 
